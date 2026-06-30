@@ -126,7 +126,7 @@ pipeline_network (bridge)
 ### 1. Clonar y configurar variables de entorno
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/sebastianmct/spotify-pipeline.git
 cd spotify-pipeline
 cp .env.example .env
 ```
