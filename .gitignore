@@ -55,7 +55,6 @@ data/external/.gitkeep
 *.png
 *.jpg
 *.jpeg
-*.pdf
 
 # Database
 *.db
