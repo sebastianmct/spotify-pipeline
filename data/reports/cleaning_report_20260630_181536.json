@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-06-30T18:15:39.025976",
+  "statistics": {
+    "initial_records": 5050,
+    "final_records": 5000,
+    "duplicates_removed": 50,
+    "nulls_handled": {
+      "album_name": 100,
+      "danceability": 50
+    },
+    "out_of_range_clipped": 0,
+    "records_transformed": 5000
+  },
+  "final_shape": {
+    "rows": 5000,
+    "columns": 23
+  },
+  "data_quality": {
+    "completeness_pct": 100.0,
+    "retention_rate_pct": 99.00990099009901
+  },
+  "column_info": {
+    "track_id": {
+      "dtype": "object",
+      "nulls": 0,
+      "unique_values": 5000
+    },
+    "artists": {
+      "dtype": "category",
+      "nulls": 0,
+      "unique_values": 250
+    },
+    "album_name": {
+      "dtype": "category",
+      "nulls": 0,
+      "unique_values": 401
+    },
+    "track_name": {
+      "dtype": "object",
+      "nulls": 0,
+      "unique_values": 5000
+    },
+    "popularity": {
+      "dtype": "uint8",
+      "nulls": 0,
+      "unique_values": 101
+    },
+    "duration_ms": {
+      "dtype": "uint32",
+      "nulls": 0,
+      "unique_values": 4966
+    },
+    "explicit": {
+      "dtype": "bool",
+      "nulls": 0,
+      "unique_values": 2
+    },
+    "danceability": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 996
+    },
+    "energy": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 989
+    },
+    "key": {
+      "dtype": "uint8",
+      "nulls": 0,
+      "unique_values": 12
+    },
+    "loudness": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 4671
+    },
+    "mode": {
+      "dtype": "uint8",
+      "nulls": 0,
+      "unique_values": 2
+    },
+    "speechiness": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 994
+    },
+    "acousticness": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 997
+    },
+    "instrumentalness": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 990
+    },
+    "liveness": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 997
+    },
+    "valence": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 992
+    },
+    "tempo": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 4271
+    },
+    "time_signature": {
+      "dtype": "uint8",
+      "nulls": 0,
+      "unique_values": 3
+    },
+    "track_genre": {
+      "dtype": "category",
+      "nulls": 0,
+      "unique_values": 10
+    },
+    "duration_min": {
+      "dtype": "float32",
+      "nulls": 0,
+      "unique_values": 601
+    },
+    "popularity_category": {
+      "dtype": "category",
+      "nulls": 0,
+      "unique_values": 3
+    },
+    "track_genre_grouped": {
+      "dtype": "category",
+      "nulls": 0,
+      "unique_values": 10
+    }
+  }
+}

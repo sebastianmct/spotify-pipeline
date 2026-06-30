@@ -1,0 +1,76 @@
+2026-06-30 18:17:56,366 - carga_stage - INFO - ================================================================================
+2026-06-30 18:17:56,367 - carga_stage - INFO - INICIANDO ENTRENAMIENTO Y CARGA DE RESULTADOS
+2026-06-30 18:17:56,367 - carga_stage - INFO - ================================================================================
+2026-06-30 18:17:56,367 - carga_stage - INFO - Archivo de entrada: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\validated\spotify_tracks_validated.csv
+2026-06-30 18:17:56,367 - carga_stage - INFO - Variable objetivo: popularity_category
+2026-06-30 18:17:56,458 - carga_stage - INFO - Proporción de prueba (test_size): 0.2
+2026-06-30 18:17:56,458 - carga_stage - INFO - Inicio del proceso: 2026-06-30 18:17:56.458767
+2026-06-30 18:17:56,458 - carga_stage - INFO - 
+Cargando datos validados...
+2026-06-30 18:17:56,484 - carga_stage - INFO -   Registros: 5,000
+2026-06-30 18:17:56,484 - carga_stage - INFO -   Columnas: 23
+2026-06-30 18:17:56,484 - carga_stage - INFO - 
+--- Ingeniería de Características Final ---
+2026-06-30 18:17:56,490 - carga_stage - INFO -   Total de features seleccionadas: 15
+2026-06-30 18:17:56,490 - carga_stage - INFO -   Features: ['danceability', 'energy', 'loudness', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_min', 'key', 'mode', 'time_signature', 'explicit_encoded', 'track_genre_grouped_encoded']
+2026-06-30 18:17:56,491 - carga_stage - INFO - 
+--- Dividiendo Datos (Train/Test Split) ---
+2026-06-30 18:17:56,496 - carga_stage - INFO -   Registros de entrenamiento: 4,000
+2026-06-30 18:17:56,497 - carga_stage - INFO -   Registros de prueba: 1,000
+2026-06-30 18:17:56,497 - carga_stage - INFO - 
+  Distribución de clases en entrenamiento:
+2026-06-30 18:17:56,497 - carga_stage - INFO -     Baja: 1,365 (34.12%)
+2026-06-30 18:17:56,498 - carga_stage - INFO -     Alta: 1,339 (33.48%)
+2026-06-30 18:17:56,498 - carga_stage - INFO -     Media: 1,296 (32.40%)
+2026-06-30 18:17:56,498 - carga_stage - INFO - 
+--- Entrenando Modelo (Random Forest Classifier) ---
+2026-06-30 18:17:58,416 - carga_stage - INFO -   Estimadores: 200
+2026-06-30 18:17:58,462 - carga_stage - INFO - 
+  Top 5 características más importantes:
+2026-06-30 18:17:58,462 - carga_stage - INFO -     tempo: 0.0885
+2026-06-30 18:17:58,463 - carga_stage - INFO -     speechiness: 0.0879
+2026-06-30 18:17:58,463 - carga_stage - INFO -     loudness: 0.0875
+2026-06-30 18:17:58,463 - carga_stage - INFO -     energy: 0.0868
+2026-06-30 18:17:58,463 - carga_stage - INFO -     liveness: 0.0864
+2026-06-30 18:17:58,463 - carga_stage - INFO - 
+================================================================================
+2026-06-30 18:17:58,463 - carga_stage - INFO - EVALUACIÓN DEL MODELO
+2026-06-30 18:17:58,463 - carga_stage - INFO - ================================================================================
+2026-06-30 18:17:58,543 - carga_stage - INFO -   Accuracy:  0.3380
+2026-06-30 18:17:58,543 - carga_stage - INFO -   Precision: 0.3366
+2026-06-30 18:17:58,543 - carga_stage - INFO -   Recall:    0.3380
+2026-06-30 18:17:58,543 - carga_stage - INFO -   F1-Score:  0.3362
+2026-06-30 18:17:58,588 - carga_stage - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+        Alta       0.33      0.34      0.34       335
+        Baja       0.35      0.40      0.37       341
+       Media       0.32      0.27      0.29       324
+
+    accuracy                           0.34      1000
+   macro avg       0.34      0.34      0.34      1000
+weighted avg       0.34      0.34      0.34      1000
+
+2026-06-30 18:17:58,588 - carga_stage - INFO - 
+--- Generando Matriz de Confusión ---
+2026-06-30 18:17:58,793 - carga_stage - INFO - 
+--- Guardando Artefactos del Modelo ---
+2026-06-30 18:17:58,898 - carga_stage - INFO - 
+--- Generando Datos para el Dashboard ---
+2026-06-30 18:17:59,045 - carga_stage - INFO -   Registros: 5,000
+2026-06-30 18:17:59,045 - carga_stage - INFO -   Tamaño: 0.73 MB
+2026-06-30 18:17:59,045 - carga_stage - INFO - 
+--- Cargando Resultados en MySQL ---
+2026-06-30 18:17:59,105 - carga_stage - INFO -   Insertando tracks en spotify_tracks...
+2026-06-30 18:18:01,866 - carga_stage - WARNING -   Los resultados se guardaron en archivos locales.
+2026-06-30 18:18:01,866 - carga_stage - INFO - 
+================================================================================
+2026-06-30 18:18:01,866 - carga_stage - INFO - PROCESO DE ENTRENAMIENTO Y CARGA COMPLETADO EXITOSAMENTE
+2026-06-30 18:18:01,866 - carga_stage - INFO - ================================================================================
+2026-06-30 18:18:01,866 - carga_stage - INFO - Tiempo total: 5.41 segundos
+2026-06-30 18:18:01,866 - carga_stage - INFO - Log guardado en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\logs\04_carga_20260630_181754.log
+2026-06-30 18:18:01,866 - carga_stage - INFO - 
+Resumen Final:
+2026-06-30 18:18:01,866 - carga_stage - INFO -   Accuracy del modelo: 0.3380
+2026-06-30 18:18:01,866 - carga_stage - INFO -   F1-Score (weighted): 0.3362

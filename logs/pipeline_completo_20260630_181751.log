@@ -1,0 +1,259 @@
+2026-06-30 18:17:54,149 - INFO - Inicio del pipeline: 2026-06-30 18:17:54
+2026-06-30 18:17:54,150 - INFO - ======================================================================
+2026-06-30 18:17:54,150 - INFO - ================================================================================
+2026-06-30 18:17:54,150 - INFO - INICIANDO PROCESO DE INGESTA DE DATOS
+2026-06-30 18:17:54,150 - INFO - ================================================================================
+2026-06-30 18:17:54,150 - INFO - Archivo fuente: data\external\spotify_tracks.csv
+2026-06-30 18:17:54,218 - INFO - Archivo de salida: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\raw\spotify_tracks_raw.csv
+2026-06-30 18:17:55,218 - INFO - Inicio del proceso: 2026-06-30 18:17:55.217576
+2026-06-30 18:17:55,218 - INFO - Iniciando carga de datos...
+2026-06-30 18:17:55,218 - WARNING - No se encontró el archivo fuente en: data\external\spotify_tracks.csv
+2026-06-30 18:17:55,218 - WARNING - Generando dataset de muestra para desarrollo/demo...
+2026-06-30 18:17:55,218 - INFO - Creando dataset de muestra para desarrollo...
+2026-06-30 18:17:55,230 - INFO - Dataset de muestra creado: 5,050 registros
+2026-06-30 18:17:55,230 - INFO - Validando estructura de datos...
+2026-06-30 18:17:55,232 - INFO - Total de columnas: 20
+2026-06-30 18:17:55,232 - INFO - 
+================================================================================
+2026-06-30 18:17:55,232 - INFO - REPORTE DE INGESTA
+2026-06-30 18:17:55,232 - INFO - ================================================================================
+2026-06-30 18:17:55,240 - INFO - Registros totales: 5,050
+2026-06-30 18:17:55,240 - INFO - Columnas: 20
+2026-06-30 18:17:55,240 - INFO - Uso de memoria: 2.10 MB
+2026-06-30 18:17:55,240 - INFO - Géneros distintos: 10
+2026-06-30 18:17:55,241 - INFO - Rango de popularidad: 0 - 100
+2026-06-30 18:17:55,241 - INFO - 
+Valores nulos por columna:
+2026-06-30 18:17:55,241 - INFO -   album_name: 101 (2.00%)
+2026-06-30 18:17:55,241 - INFO -   danceability: 51 (1.01%)
+2026-06-30 18:17:55,241 - INFO - 
+Guardando datos en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\raw\spotify_tracks_raw.csv
+2026-06-30 18:17:55,292 - INFO -   Tamaño del archivo: 0.61 MB
+2026-06-30 18:17:55,292 - INFO -   Registros: 5,050
+2026-06-30 18:17:55,292 - INFO - 
+================================================================================
+2026-06-30 18:17:55,292 - INFO - PROCESO DE INGESTA COMPLETADO EXITOSAMENTE
+2026-06-30 18:17:55,293 - INFO - ================================================================================
+2026-06-30 18:17:55,293 - INFO - Tiempo total: 0.07 segundos
+2026-06-30 18:17:55,293 - INFO - Log guardado en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\logs\01_ingesta_20260630_181751.log
+2026-06-30 18:17:55,529 - INFO - ================================================================================
+2026-06-30 18:17:55,529 - INFO - INICIANDO PROCESO DE LIMPIEZA Y TRANSFORMACIÓN
+2026-06-30 18:17:55,529 - INFO - ================================================================================
+2026-06-30 18:17:55,529 - INFO - Archivo de entrada: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\raw\spotify_tracks_raw.csv
+2026-06-30 18:17:55,529 - INFO - Archivo de salida: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\processed\spotify_tracks_clean.csv
+2026-06-30 18:17:55,598 - INFO - Inicio del proceso: 2026-06-30 18:17:55.598100
+2026-06-30 18:17:55,598 - INFO - Cargando datos...
+2026-06-30 18:17:55,631 - INFO -   Registros: 5,050
+2026-06-30 18:17:55,632 - INFO -   Columnas: 20
+2026-06-30 18:17:55,638 - INFO -   Memoria: 2.12 MB
+2026-06-30 18:17:55,638 - INFO - 
+--- Eliminando Duplicados ---
+2026-06-30 18:17:55,640 - INFO - Registros iniciales: 5,050
+2026-06-30 18:17:55,640 - INFO - Duplicados encontrados: 50
+2026-06-30 18:17:55,640 - INFO - Registros después de limpieza: 5,000
+2026-06-30 18:17:55,641 - INFO - 
+--- Manejo de Valores Nulos ---
+2026-06-30 18:17:55,645 - INFO - Columnas con valores nulos: 2
+2026-06-30 18:17:55,645 - INFO -   album_name: 100 (2.00%)
+2026-06-30 18:17:55,646 - INFO -   danceability: 50 (1.00%)
+2026-06-30 18:17:55,648 - INFO - Registros eliminados por campos críticos nulos: 0
+2026-06-30 18:17:55,650 - INFO -   album_name: 100 nulos rellenados con 'UNKNOWN'
+2026-06-30 18:17:55,652 - INFO -   danceability: 50 nulos rellenados con mediana (0.504)
+2026-06-30 18:17:55,656 - INFO - 
+--- Normalizando Columnas de Texto ---
+2026-06-30 18:17:55,658 - INFO -   artists: espacios eliminados
+2026-06-30 18:17:55,661 - INFO -   album_name: espacios eliminados
+2026-06-30 18:17:55,664 - INFO -   track_name: espacios eliminados
+2026-06-30 18:17:55,667 - INFO -   track_genre: normalizado a minúsculas
+2026-06-30 18:17:55,667 - INFO - 
+--- Validando Rangos de Variables de Audio ---
+2026-06-30 18:17:55,674 - INFO - 
+--- Creando Características Adicionales ---
+2026-06-30 18:17:55,683 - INFO -     Baja: 1,706 (34.12%)
+2026-06-30 18:17:55,683 - INFO -     Alta: 1,674 (33.48%)
+2026-06-30 18:17:55,684 - INFO -     Media: 1,620 (32.40%)
+2026-06-30 18:17:55,693 - INFO - 
+--- Optimizando Tipos de Datos ---
+2026-06-30 18:17:55,711 - INFO -   artists: convertido a category (250 valores únicos)
+2026-06-30 18:17:55,715 - INFO -   album_name: convertido a category (401 valores únicos)
+2026-06-30 18:17:55,718 - INFO -   track_genre: convertido a category (10 valores únicos)
+2026-06-30 18:17:55,720 - INFO -   popularity_category: convertido a category (3 valores únicos)
+2026-06-30 18:17:55,722 - INFO -   track_genre_grouped: convertido a category (10 valores únicos)
+2026-06-30 18:17:55,739 - INFO - Memoria antes: 2.77 MB
+2026-06-30 18:17:55,740 - INFO - Memoria después: 1.01 MB
+2026-06-30 18:17:55,740 - INFO - Reducción: 63.70%
+2026-06-30 18:17:55,740 - INFO - 
+================================================================================
+2026-06-30 18:17:55,740 - INFO - REPORTE DE LIMPIEZA Y TRANSFORMACIÓN
+2026-06-30 18:17:55,740 - INFO - ================================================================================
+2026-06-30 18:17:55,741 - INFO - 
+Estadísticas Generales:
+2026-06-30 18:17:55,741 - INFO -   Registros iniciales: 5,050
+2026-06-30 18:17:55,741 - INFO -   Registros finales: 5,000
+2026-06-30 18:17:55,741 - INFO -   Duplicados removidos: 50
+2026-06-30 18:17:55,741 - INFO -   Valores fuera de rango acotados: 0
+2026-06-30 18:17:55,741 - INFO -   Tasa de retención: 99.01%
+2026-06-30 18:17:55,741 - INFO - 
+Valores nulos manejados:
+2026-06-30 18:17:55,741 - INFO -   album_name: 100
+2026-06-30 18:17:55,742 - INFO -   danceability: 50
+2026-06-30 18:17:55,742 - INFO - 
+Calidad de Datos Final:
+2026-06-30 18:17:55,744 - INFO -   Completitud: 100.00%
+2026-06-30 18:17:55,744 - INFO -   Total de columnas: 23
+2026-06-30 18:17:55,820 - INFO - 
+Guardando datos limpios en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\processed\spotify_tracks_clean.csv
+2026-06-30 18:17:55,820 - INFO - Eliminando registros con valores NaN restantes...
+2026-06-30 18:17:55,880 - INFO -   Tamaño del archivo: 0.68 MB
+2026-06-30 18:17:55,880 - INFO -   Registros: 5,000
+2026-06-30 18:17:55,880 - INFO -   Columnas: 23
+2026-06-30 18:17:55,880 - INFO - 
+================================================================================
+2026-06-30 18:17:55,880 - INFO - PROCESO DE LIMPIEZA COMPLETADO EXITOSAMENTE
+2026-06-30 18:17:55,881 - INFO - ================================================================================
+2026-06-30 18:17:55,881 - INFO - Tiempo total: 0.28 segundos
+2026-06-30 18:17:55,881 - INFO - Log guardado en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\logs\02_limpieza_20260630_181751.log
+2026-06-30 18:17:55,882 - INFO - ================================================================================
+2026-06-30 18:17:55,883 - INFO - INICIANDO PROCESO DE VALIDACIÓN
+2026-06-30 18:17:55,883 - INFO - ================================================================================
+2026-06-30 18:17:55,883 - INFO - Archivo de entrada: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\processed\spotify_tracks_clean.csv
+2026-06-30 18:17:55,883 - INFO - Archivo de salida (válidos): C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\validated\spotify_tracks_validated.csv
+2026-06-30 18:17:55,896 - INFO - Archivo de salida (rechazados): C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\validated\spotify_tracks_rejected.csv
+2026-06-30 18:17:55,896 - INFO - Inicio del proceso: 2026-06-30 18:17:55.896537
+2026-06-30 18:17:55,896 - INFO - Cargando datos procesados...
+2026-06-30 18:17:55,923 - INFO -   Registros: 5,000
+2026-06-30 18:17:55,923 - INFO -   Columnas: 23
+2026-06-30 18:17:55,923 - INFO - 
+================================================================================
+2026-06-30 18:17:55,923 - INFO - VALIDACIÓN ESTRUCTURAL
+2026-06-30 18:17:55,923 - INFO - ================================================================================
+2026-06-30 18:17:55,924 - INFO - 
+--- Validando Columnas Requeridas ---
+2026-06-30 18:17:55,926 - INFO - 
+--- Validando Unicidad ---
+2026-06-30 18:17:55,929 - INFO - 
+--- Validando Campos No Nulos ---
+2026-06-30 18:17:55,948 - INFO - 
+================================================================================
+2026-06-30 18:17:55,948 - INFO - VALIDACIÓN SEMÁNTICA
+2026-06-30 18:17:55,948 - INFO - ================================================================================
+2026-06-30 18:17:55,948 - INFO - 
+--- Validando Rangos de Variables de Audio ---
+2026-06-30 18:17:56,044 - INFO - 
+--- Validando Otros Rangos Numéricos ---
+2026-06-30 18:17:56,137 - INFO - 
+--- Validando Valores Categóricos ---
+2026-06-30 18:17:56,151 - INFO - 
+--- Validando Longitud de Campos de Texto ---
+2026-06-30 18:17:56,155 - INFO - 
+--- Validando Coherencia de Categoría de Popularidad ---
+2026-06-30 18:17:56,166 - INFO - 
+================================================================================
+2026-06-30 18:17:56,167 - INFO - DETECCIÓN DE ANOMALÍAS
+2026-06-30 18:17:56,167 - INFO - ================================================================================
+2026-06-30 18:17:56,178 - INFO - 
+================================================================================
+2026-06-30 18:17:56,178 - INFO - GENERANDO REPORTE DE VALIDACIÓN
+2026-06-30 18:17:56,178 - INFO - ================================================================================
+2026-06-30 18:17:56,178 - INFO - 
+Resumen de Validación:
+2026-06-30 18:17:56,178 - INFO -   Total de registros: 5,000
+2026-06-30 18:17:56,179 - INFO -   Registros válidos: 5,000 (100.00%)
+2026-06-30 18:17:56,179 - INFO -   Registros rechazados: 0 (0.00%)
+2026-06-30 18:17:56,180 - INFO - 
+--- Guardando Datos Validados ---
+2026-06-30 18:17:56,183 - INFO - Limpiando valores 'nan' literales...
+2026-06-30 18:17:56,244 - INFO -   Archivo: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\validated\spotify_tracks_validated.csv
+2026-06-30 18:17:56,286 - INFO -   Registros: 5,000
+2026-06-30 18:17:56,361 - INFO -   Tamaño: 0.68 MB
+2026-06-30 18:17:56,364 - INFO - 
+================================================================================
+2026-06-30 18:17:56,365 - INFO - PROCESO DE VALIDACIÓN COMPLETADO EXITOSAMENTE
+2026-06-30 18:17:56,365 - INFO - ================================================================================
+2026-06-30 18:17:56,365 - INFO - Tiempo total: 0.47 segundos
+2026-06-30 18:17:56,365 - INFO - Log guardado en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\logs\03_validacion_20260630_181752.log
+2026-06-30 18:17:56,366 - INFO - ================================================================================
+2026-06-30 18:17:56,367 - INFO - INICIANDO ENTRENAMIENTO Y CARGA DE RESULTADOS
+2026-06-30 18:17:56,367 - INFO - ================================================================================
+2026-06-30 18:17:56,367 - INFO - Archivo de entrada: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\validated\spotify_tracks_validated.csv
+2026-06-30 18:17:56,367 - INFO - Variable objetivo: popularity_category
+2026-06-30 18:17:56,458 - INFO - Proporción de prueba (test_size): 0.2
+2026-06-30 18:17:56,458 - INFO - Inicio del proceso: 2026-06-30 18:17:56.458767
+2026-06-30 18:17:56,458 - INFO - 
+Cargando datos validados...
+2026-06-30 18:17:56,484 - INFO -   Registros: 5,000
+2026-06-30 18:17:56,484 - INFO -   Columnas: 23
+2026-06-30 18:17:56,484 - INFO - 
+--- Ingeniería de Características Final ---
+2026-06-30 18:17:56,490 - INFO -   Total de features seleccionadas: 15
+2026-06-30 18:17:56,490 - INFO -   Features: ['danceability', 'energy', 'loudness', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_min', 'key', 'mode', 'time_signature', 'explicit_encoded', 'track_genre_grouped_encoded']
+2026-06-30 18:17:56,491 - INFO - 
+--- Dividiendo Datos (Train/Test Split) ---
+2026-06-30 18:17:56,496 - INFO -   Registros de entrenamiento: 4,000
+2026-06-30 18:17:56,497 - INFO -   Registros de prueba: 1,000
+2026-06-30 18:17:56,497 - INFO - 
+  Distribución de clases en entrenamiento:
+2026-06-30 18:17:56,497 - INFO -     Baja: 1,365 (34.12%)
+2026-06-30 18:17:56,498 - INFO -     Alta: 1,339 (33.48%)
+2026-06-30 18:17:56,498 - INFO -     Media: 1,296 (32.40%)
+2026-06-30 18:17:56,498 - INFO - 
+--- Entrenando Modelo (Random Forest Classifier) ---
+2026-06-30 18:17:58,416 - INFO -   Estimadores: 200
+2026-06-30 18:17:58,462 - INFO - 
+  Top 5 características más importantes:
+2026-06-30 18:17:58,462 - INFO -     tempo: 0.0885
+2026-06-30 18:17:58,463 - INFO -     speechiness: 0.0879
+2026-06-30 18:17:58,463 - INFO -     loudness: 0.0875
+2026-06-30 18:17:58,463 - INFO -     energy: 0.0868
+2026-06-30 18:17:58,463 - INFO -     liveness: 0.0864
+2026-06-30 18:17:58,463 - INFO - 
+================================================================================
+2026-06-30 18:17:58,463 - INFO - EVALUACIÓN DEL MODELO
+2026-06-30 18:17:58,463 - INFO - ================================================================================
+2026-06-30 18:17:58,543 - INFO -   Accuracy:  0.3380
+2026-06-30 18:17:58,543 - INFO -   Precision: 0.3366
+2026-06-30 18:17:58,543 - INFO -   Recall:    0.3380
+2026-06-30 18:17:58,543 - INFO -   F1-Score:  0.3362
+2026-06-30 18:17:58,588 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+        Alta       0.33      0.34      0.34       335
+        Baja       0.35      0.40      0.37       341
+       Media       0.32      0.27      0.29       324
+
+    accuracy                           0.34      1000
+   macro avg       0.34      0.34      0.34      1000
+weighted avg       0.34      0.34      0.34      1000
+
+2026-06-30 18:17:58,588 - INFO - 
+--- Generando Matriz de Confusión ---
+2026-06-30 18:17:58,793 - INFO - 
+--- Guardando Artefactos del Modelo ---
+2026-06-30 18:17:58,898 - INFO - 
+--- Generando Datos para el Dashboard ---
+2026-06-30 18:17:59,045 - INFO -   Registros: 5,000
+2026-06-30 18:17:59,045 - INFO -   Tamaño: 0.73 MB
+2026-06-30 18:17:59,045 - INFO - 
+--- Cargando Resultados en MySQL ---
+2026-06-30 18:17:59,105 - INFO -   Insertando tracks en spotify_tracks...
+2026-06-30 18:18:01,866 - WARNING -   Los resultados se guardaron en archivos locales.
+2026-06-30 18:18:01,866 - INFO - 
+================================================================================
+2026-06-30 18:18:01,866 - INFO - PROCESO DE ENTRENAMIENTO Y CARGA COMPLETADO EXITOSAMENTE
+2026-06-30 18:18:01,866 - INFO - ================================================================================
+2026-06-30 18:18:01,866 - INFO - Tiempo total: 5.41 segundos
+2026-06-30 18:18:01,866 - INFO - Log guardado en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\logs\04_carga_20260630_181754.log
+2026-06-30 18:18:01,866 - INFO - 
+Resumen Final:
+2026-06-30 18:18:01,866 - INFO -   Accuracy del modelo: 0.3380
+2026-06-30 18:18:01,866 - INFO -   F1-Score (weighted): 0.3362
+2026-06-30 18:18:01,884 - INFO - 
+======================================================================
+2026-06-30 18:18:01,884 - INFO - RESUMEN DEL PIPELINE
+2026-06-30 18:18:01,884 - INFO - ======================================================================
+2026-06-30 18:18:01,902 - INFO - 
+  Duración total: 7.74 segundos
+2026-06-30 18:18:01,902 - INFO - ======================================================================
+2026-06-30 18:18:01,903 - INFO - 
+  Resumen guardado en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\logs\pipeline_summary_20260630_181801.json

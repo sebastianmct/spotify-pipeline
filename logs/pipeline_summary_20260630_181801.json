@@ -1,0 +1,24 @@
+{
+  "pipeline_start": "2026-06-30T18:17:54.148466",
+  "pipeline_end": "2026-06-30T18:18:01.903051",
+  "total_duration_seconds": 7.74,
+  "overall_status": "SUCCESS",
+  "stages": {
+    "ingesta": {
+      "status": "SUCCESS",
+      "duration_seconds": 1.14
+    },
+    "limpieza": {
+      "status": "SUCCESS",
+      "duration_seconds": 0.35
+    },
+    "validacion": {
+      "status": "SUCCESS",
+      "duration_seconds": 0.48
+    },
+    "carga": {
+      "status": "SUCCESS",
+      "duration_seconds": 5.5
+    }
+  }
+}

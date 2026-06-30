@@ -1,0 +1,77 @@
+2026-06-30 18:17:55,529 - limpieza_stage - INFO - ================================================================================
+2026-06-30 18:17:55,529 - limpieza_stage - INFO - INICIANDO PROCESO DE LIMPIEZA Y TRANSFORMACIÓN
+2026-06-30 18:17:55,529 - limpieza_stage - INFO - ================================================================================
+2026-06-30 18:17:55,529 - limpieza_stage - INFO - Archivo de entrada: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\raw\spotify_tracks_raw.csv
+2026-06-30 18:17:55,529 - limpieza_stage - INFO - Archivo de salida: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\processed\spotify_tracks_clean.csv
+2026-06-30 18:17:55,598 - limpieza_stage - INFO - Inicio del proceso: 2026-06-30 18:17:55.598100
+2026-06-30 18:17:55,598 - limpieza_stage - INFO - Cargando datos...
+2026-06-30 18:17:55,631 - limpieza_stage - INFO -   Registros: 5,050
+2026-06-30 18:17:55,632 - limpieza_stage - INFO -   Columnas: 20
+2026-06-30 18:17:55,638 - limpieza_stage - INFO -   Memoria: 2.12 MB
+2026-06-30 18:17:55,638 - limpieza_stage - INFO - 
+--- Eliminando Duplicados ---
+2026-06-30 18:17:55,640 - limpieza_stage - INFO - Registros iniciales: 5,050
+2026-06-30 18:17:55,640 - limpieza_stage - INFO - Duplicados encontrados: 50
+2026-06-30 18:17:55,640 - limpieza_stage - INFO - Registros después de limpieza: 5,000
+2026-06-30 18:17:55,641 - limpieza_stage - INFO - 
+--- Manejo de Valores Nulos ---
+2026-06-30 18:17:55,645 - limpieza_stage - INFO - Columnas con valores nulos: 2
+2026-06-30 18:17:55,645 - limpieza_stage - INFO -   album_name: 100 (2.00%)
+2026-06-30 18:17:55,646 - limpieza_stage - INFO -   danceability: 50 (1.00%)
+2026-06-30 18:17:55,648 - limpieza_stage - INFO - Registros eliminados por campos críticos nulos: 0
+2026-06-30 18:17:55,650 - limpieza_stage - INFO -   album_name: 100 nulos rellenados con 'UNKNOWN'
+2026-06-30 18:17:55,652 - limpieza_stage - INFO -   danceability: 50 nulos rellenados con mediana (0.504)
+2026-06-30 18:17:55,656 - limpieza_stage - INFO - 
+--- Normalizando Columnas de Texto ---
+2026-06-30 18:17:55,658 - limpieza_stage - INFO -   artists: espacios eliminados
+2026-06-30 18:17:55,661 - limpieza_stage - INFO -   album_name: espacios eliminados
+2026-06-30 18:17:55,664 - limpieza_stage - INFO -   track_name: espacios eliminados
+2026-06-30 18:17:55,667 - limpieza_stage - INFO -   track_genre: normalizado a minúsculas
+2026-06-30 18:17:55,667 - limpieza_stage - INFO - 
+--- Validando Rangos de Variables de Audio ---
+2026-06-30 18:17:55,674 - limpieza_stage - INFO - 
+--- Creando Características Adicionales ---
+2026-06-30 18:17:55,683 - limpieza_stage - INFO -     Baja: 1,706 (34.12%)
+2026-06-30 18:17:55,683 - limpieza_stage - INFO -     Alta: 1,674 (33.48%)
+2026-06-30 18:17:55,684 - limpieza_stage - INFO -     Media: 1,620 (32.40%)
+2026-06-30 18:17:55,693 - limpieza_stage - INFO - 
+--- Optimizando Tipos de Datos ---
+2026-06-30 18:17:55,711 - limpieza_stage - INFO -   artists: convertido a category (250 valores únicos)
+2026-06-30 18:17:55,715 - limpieza_stage - INFO -   album_name: convertido a category (401 valores únicos)
+2026-06-30 18:17:55,718 - limpieza_stage - INFO -   track_genre: convertido a category (10 valores únicos)
+2026-06-30 18:17:55,720 - limpieza_stage - INFO -   popularity_category: convertido a category (3 valores únicos)
+2026-06-30 18:17:55,722 - limpieza_stage - INFO -   track_genre_grouped: convertido a category (10 valores únicos)
+2026-06-30 18:17:55,739 - limpieza_stage - INFO - Memoria antes: 2.77 MB
+2026-06-30 18:17:55,740 - limpieza_stage - INFO - Memoria después: 1.01 MB
+2026-06-30 18:17:55,740 - limpieza_stage - INFO - Reducción: 63.70%
+2026-06-30 18:17:55,740 - limpieza_stage - INFO - 
+================================================================================
+2026-06-30 18:17:55,740 - limpieza_stage - INFO - REPORTE DE LIMPIEZA Y TRANSFORMACIÓN
+2026-06-30 18:17:55,740 - limpieza_stage - INFO - ================================================================================
+2026-06-30 18:17:55,741 - limpieza_stage - INFO - 
+Estadísticas Generales:
+2026-06-30 18:17:55,741 - limpieza_stage - INFO -   Registros iniciales: 5,050
+2026-06-30 18:17:55,741 - limpieza_stage - INFO -   Registros finales: 5,000
+2026-06-30 18:17:55,741 - limpieza_stage - INFO -   Duplicados removidos: 50
+2026-06-30 18:17:55,741 - limpieza_stage - INFO -   Valores fuera de rango acotados: 0
+2026-06-30 18:17:55,741 - limpieza_stage - INFO -   Tasa de retención: 99.01%
+2026-06-30 18:17:55,741 - limpieza_stage - INFO - 
+Valores nulos manejados:
+2026-06-30 18:17:55,741 - limpieza_stage - INFO -   album_name: 100
+2026-06-30 18:17:55,742 - limpieza_stage - INFO -   danceability: 50
+2026-06-30 18:17:55,742 - limpieza_stage - INFO - 
+Calidad de Datos Final:
+2026-06-30 18:17:55,744 - limpieza_stage - INFO -   Completitud: 100.00%
+2026-06-30 18:17:55,744 - limpieza_stage - INFO -   Total de columnas: 23
+2026-06-30 18:17:55,820 - limpieza_stage - INFO - 
+Guardando datos limpios en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\processed\spotify_tracks_clean.csv
+2026-06-30 18:17:55,820 - limpieza_stage - INFO - Eliminando registros con valores NaN restantes...
+2026-06-30 18:17:55,880 - limpieza_stage - INFO -   Tamaño del archivo: 0.68 MB
+2026-06-30 18:17:55,880 - limpieza_stage - INFO -   Registros: 5,000
+2026-06-30 18:17:55,880 - limpieza_stage - INFO -   Columnas: 23
+2026-06-30 18:17:55,880 - limpieza_stage - INFO - 
+================================================================================
+2026-06-30 18:17:55,880 - limpieza_stage - INFO - PROCESO DE LIMPIEZA COMPLETADO EXITOSAMENTE
+2026-06-30 18:17:55,881 - limpieza_stage - INFO - ================================================================================
+2026-06-30 18:17:55,881 - limpieza_stage - INFO - Tiempo total: 0.28 segundos
+2026-06-30 18:17:55,881 - limpieza_stage - INFO - Log guardado en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\logs\02_limpieza_20260630_181751.log

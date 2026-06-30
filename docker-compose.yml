@@ -1,0 +1,71 @@
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spotify_ml_pipeline
+    environment:
+      - SPOTIFY_DATASET_PATH=/app/data/external/spotify_tracks.csv
+      - SAMPLE_SIZE=${SAMPLE_SIZE:-5000}
+      - TEST_SIZE=${TEST_SIZE:-0.2}
+      - RANDOM_STATE=${RANDOM_STATE:-42}
+      - N_ESTIMATORS=${N_ESTIMATORS:-200}
+      - DB_HOST=${DB_HOST:-mysql}
+      - DB_PORT=${DB_PORT:-3306}
+      - DB_USER=${DB_USER:-pipeline_user}
+      - DB_PASSWORD=${DB_PASSWORD:-pipelinepass}
+      - DB_NAME=${DB_NAME:-spotify_ml_db}
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./scripts:/app/scripts
+      - ./sql:/app/sql
+    networks:
+      - pipeline_network
+    command: tail -f /dev/null
+
+  mysql:
+    image: mysql:8.0
+    container_name: spotify_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-rootpassword}
+      MYSQL_DATABASE: ${DB_NAME:-spotify_ml_db}
+      MYSQL_USER: ${DB_USER:-pipeline_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-pipelinepass}
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    networks:
+      - pipeline_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: spotify_phpmyadmin
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: ${DB_USER:-pipeline_user}
+      PMA_PASSWORD: ${DB_PASSWORD:-pipelinepass}
+    ports:
+      - "8080:80"
+    networks:
+      - pipeline_network
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  pipeline_network:
+    driver: bridge

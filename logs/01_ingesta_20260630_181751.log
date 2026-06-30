@@ -1,0 +1,36 @@
+2026-06-30 18:17:54,150 - ingesta_stage - INFO - ================================================================================
+2026-06-30 18:17:54,150 - ingesta_stage - INFO - INICIANDO PROCESO DE INGESTA DE DATOS
+2026-06-30 18:17:54,150 - ingesta_stage - INFO - ================================================================================
+2026-06-30 18:17:54,150 - ingesta_stage - INFO - Archivo fuente: data\external\spotify_tracks.csv
+2026-06-30 18:17:54,218 - ingesta_stage - INFO - Archivo de salida: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\raw\spotify_tracks_raw.csv
+2026-06-30 18:17:55,218 - ingesta_stage - INFO - Inicio del proceso: 2026-06-30 18:17:55.217576
+2026-06-30 18:17:55,218 - ingesta_stage - INFO - Iniciando carga de datos...
+2026-06-30 18:17:55,218 - ingesta_stage - WARNING - No se encontró el archivo fuente en: data\external\spotify_tracks.csv
+2026-06-30 18:17:55,218 - ingesta_stage - WARNING - Generando dataset de muestra para desarrollo/demo...
+2026-06-30 18:17:55,218 - ingesta_stage - INFO - Creando dataset de muestra para desarrollo...
+2026-06-30 18:17:55,230 - ingesta_stage - INFO - Dataset de muestra creado: 5,050 registros
+2026-06-30 18:17:55,230 - ingesta_stage - INFO - Validando estructura de datos...
+2026-06-30 18:17:55,232 - ingesta_stage - INFO - Total de columnas: 20
+2026-06-30 18:17:55,232 - ingesta_stage - INFO - 
+================================================================================
+2026-06-30 18:17:55,232 - ingesta_stage - INFO - REPORTE DE INGESTA
+2026-06-30 18:17:55,232 - ingesta_stage - INFO - ================================================================================
+2026-06-30 18:17:55,240 - ingesta_stage - INFO - Registros totales: 5,050
+2026-06-30 18:17:55,240 - ingesta_stage - INFO - Columnas: 20
+2026-06-30 18:17:55,240 - ingesta_stage - INFO - Uso de memoria: 2.10 MB
+2026-06-30 18:17:55,240 - ingesta_stage - INFO - Géneros distintos: 10
+2026-06-30 18:17:55,241 - ingesta_stage - INFO - Rango de popularidad: 0 - 100
+2026-06-30 18:17:55,241 - ingesta_stage - INFO - 
+Valores nulos por columna:
+2026-06-30 18:17:55,241 - ingesta_stage - INFO -   album_name: 101 (2.00%)
+2026-06-30 18:17:55,241 - ingesta_stage - INFO -   danceability: 51 (1.01%)
+2026-06-30 18:17:55,241 - ingesta_stage - INFO - 
+Guardando datos en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\raw\spotify_tracks_raw.csv
+2026-06-30 18:17:55,292 - ingesta_stage - INFO -   Tamaño del archivo: 0.61 MB
+2026-06-30 18:17:55,292 - ingesta_stage - INFO -   Registros: 5,050
+2026-06-30 18:17:55,292 - ingesta_stage - INFO - 
+================================================================================
+2026-06-30 18:17:55,292 - ingesta_stage - INFO - PROCESO DE INGESTA COMPLETADO EXITOSAMENTE
+2026-06-30 18:17:55,293 - ingesta_stage - INFO - ================================================================================
+2026-06-30 18:17:55,293 - ingesta_stage - INFO - Tiempo total: 0.07 segundos
+2026-06-30 18:17:55,293 - ingesta_stage - INFO - Log guardado en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\logs\01_ingesta_20260630_181751.log

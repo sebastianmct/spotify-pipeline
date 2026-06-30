@@ -1,0 +1,59 @@
+2026-06-30 18:17:55,882 - validacion_stage - INFO - ================================================================================
+2026-06-30 18:17:55,883 - validacion_stage - INFO - INICIANDO PROCESO DE VALIDACIÓN
+2026-06-30 18:17:55,883 - validacion_stage - INFO - ================================================================================
+2026-06-30 18:17:55,883 - validacion_stage - INFO - Archivo de entrada: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\processed\spotify_tracks_clean.csv
+2026-06-30 18:17:55,883 - validacion_stage - INFO - Archivo de salida (válidos): C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\validated\spotify_tracks_validated.csv
+2026-06-30 18:17:55,896 - validacion_stage - INFO - Archivo de salida (rechazados): C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\validated\spotify_tracks_rejected.csv
+2026-06-30 18:17:55,896 - validacion_stage - INFO - Inicio del proceso: 2026-06-30 18:17:55.896537
+2026-06-30 18:17:55,896 - validacion_stage - INFO - Cargando datos procesados...
+2026-06-30 18:17:55,923 - validacion_stage - INFO -   Registros: 5,000
+2026-06-30 18:17:55,923 - validacion_stage - INFO -   Columnas: 23
+2026-06-30 18:17:55,923 - validacion_stage - INFO - 
+================================================================================
+2026-06-30 18:17:55,923 - validacion_stage - INFO - VALIDACIÓN ESTRUCTURAL
+2026-06-30 18:17:55,923 - validacion_stage - INFO - ================================================================================
+2026-06-30 18:17:55,924 - validacion_stage - INFO - 
+--- Validando Columnas Requeridas ---
+2026-06-30 18:17:55,926 - validacion_stage - INFO - 
+--- Validando Unicidad ---
+2026-06-30 18:17:55,929 - validacion_stage - INFO - 
+--- Validando Campos No Nulos ---
+2026-06-30 18:17:55,948 - validacion_stage - INFO - 
+================================================================================
+2026-06-30 18:17:55,948 - validacion_stage - INFO - VALIDACIÓN SEMÁNTICA
+2026-06-30 18:17:55,948 - validacion_stage - INFO - ================================================================================
+2026-06-30 18:17:55,948 - validacion_stage - INFO - 
+--- Validando Rangos de Variables de Audio ---
+2026-06-30 18:17:56,044 - validacion_stage - INFO - 
+--- Validando Otros Rangos Numéricos ---
+2026-06-30 18:17:56,137 - validacion_stage - INFO - 
+--- Validando Valores Categóricos ---
+2026-06-30 18:17:56,151 - validacion_stage - INFO - 
+--- Validando Longitud de Campos de Texto ---
+2026-06-30 18:17:56,155 - validacion_stage - INFO - 
+--- Validando Coherencia de Categoría de Popularidad ---
+2026-06-30 18:17:56,166 - validacion_stage - INFO - 
+================================================================================
+2026-06-30 18:17:56,167 - validacion_stage - INFO - DETECCIÓN DE ANOMALÍAS
+2026-06-30 18:17:56,167 - validacion_stage - INFO - ================================================================================
+2026-06-30 18:17:56,178 - validacion_stage - INFO - 
+================================================================================
+2026-06-30 18:17:56,178 - validacion_stage - INFO - GENERANDO REPORTE DE VALIDACIÓN
+2026-06-30 18:17:56,178 - validacion_stage - INFO - ================================================================================
+2026-06-30 18:17:56,178 - validacion_stage - INFO - 
+Resumen de Validación:
+2026-06-30 18:17:56,178 - validacion_stage - INFO -   Total de registros: 5,000
+2026-06-30 18:17:56,179 - validacion_stage - INFO -   Registros válidos: 5,000 (100.00%)
+2026-06-30 18:17:56,179 - validacion_stage - INFO -   Registros rechazados: 0 (0.00%)
+2026-06-30 18:17:56,180 - validacion_stage - INFO - 
+--- Guardando Datos Validados ---
+2026-06-30 18:17:56,183 - validacion_stage - INFO - Limpiando valores 'nan' literales...
+2026-06-30 18:17:56,244 - validacion_stage - INFO -   Archivo: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\data\validated\spotify_tracks_validated.csv
+2026-06-30 18:17:56,286 - validacion_stage - INFO -   Registros: 5,000
+2026-06-30 18:17:56,361 - validacion_stage - INFO -   Tamaño: 0.68 MB
+2026-06-30 18:17:56,364 - validacion_stage - INFO - 
+================================================================================
+2026-06-30 18:17:56,365 - validacion_stage - INFO - PROCESO DE VALIDACIÓN COMPLETADO EXITOSAMENTE
+2026-06-30 18:17:56,365 - validacion_stage - INFO - ================================================================================
+2026-06-30 18:17:56,365 - validacion_stage - INFO - Tiempo total: 0.47 segundos
+2026-06-30 18:17:56,365 - validacion_stage - INFO - Log guardado en: C:\Users\sebas\Downloads\GestionIA\Parcial 3\spotify-pipeline\logs\03_validacion_20260630_181752.log

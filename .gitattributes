@@ -1,0 +1,13 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# CSV files
+*.csv text diff=csv
+
+# Python files
+*.py text diff=python
+
+# Git LFS for large datasets
+data/raw/*.csv filter=lfs diff=lfs merge=lfs -text
+data/processed/*.csv filter=lfs diff=lfs merge=lfs -text
+data/validated/*.csv filter=lfs diff=lfs merge=lfs -text

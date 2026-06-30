@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-06-30T18:17:58.588285",
+  "accuracy": 0.338,
+  "precision_weighted": 0.33662666196363594,
+  "recall_weighted": 0.338,
+  "f1_weighted": 0.33616179578516503,
+  "train_records": 4000,
+  "test_records": 1000,
+  "features_used": [
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo",
+    "duration_min",
+    "key",
+    "mode",
+    "time_signature",
+    "explicit_encoded",
+    "track_genre_grouped_encoded"
+  ],
+  "model_params": {
+    "n_estimators": 200,
+    "test_size": 0.2,
+    "random_state": 42
+  }
+}
